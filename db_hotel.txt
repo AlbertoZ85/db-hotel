@@ -30,6 +30,10 @@ AS 'Totale_paganti'
 FROM `paganti`
 WHERE `ospite_id` IS NOT NULL; (oppure <> 'NULL')
 
+Più direttamente (se ospite_id = NULL non lo conteggia):
+SELECT COUNT(`ospite_id`)
+FROM `paganti`;
+
 6. Qual è il prezzo massimo pagato?
 
 SELECT MAX(`price`)
